@@ -34,3 +34,16 @@
     background-size:cover;
     position: relative;
 }
+
+.drop-zone__thumb::after{
+    position: absolute;
+    content: attr(data-label);
+    bottom: 0;
+    left:0;
+    width: 100%;
+    padding: 5px 0;
+    color: white;
+    background: #000000bd;
+    font-size:14px;
+    text-align:center;
+}
