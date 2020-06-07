@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag and Drop Prototype</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 </head>
 <body>
-
+    <a href="pageFlip/SelectPath/select.html">
+        <button class="button-primary">See uploaded PDFs</button>
+    </a>
         <div class="drop-zone">
             <span class="drop-zone__prompt">Drop file here or click to upload</span> 
             <input type="file" name="myfile" class="drop-zone__input"id="inpFile">
@@ -16,8 +19,9 @@
         <button id="btnUpload">Upload File</button>
 
     <div class="filenames">
-        Files Names<br>
+      <strong>Files Names</strong><br>
     </div>
+    <h2 id="comment">...</h2>
     <script src ="script.js"></script>
 </body>
 </html>

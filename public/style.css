@@ -1,3 +1,10 @@
+*
+{
+text-align: center !important;
+margin: auto !important;
+margin-top:100px;
+}
+
 .drop-zone{
     max-width: 200px;
     height: 200px;

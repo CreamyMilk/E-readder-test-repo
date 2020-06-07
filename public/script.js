@@ -1,22 +1,26 @@
+
 const btnUpload = document.getElementById('btnUpload');
 const inpFile = document.getElementById("inpFile");
-
+const comment = document.getElementById("comment");
 btnUpload.addEventListener('click',e =>{
-    const endpoint = "/upload";
+    const endpoint = "http://154.70.22.151:9020/upload";
     const formData = new FormData();
 
     for(const file of inpFile.files){
         formData.append("myFiles",file);
     }
 
-    for(const [key,value] of formData){
-        formData.append("myFiles",file);
-    }
-
     fetch(endpoint , {
         method:"POST",
         body: formData
-    }).catch((err)=>{console.log(err)})
+    })
+    .then((response) =>{
+        console.log(response)
+        if(response){
+            comment.textContent ='👍Succesful Upload😊';
+        }
+    })
+    .catch((err)=>{console.log(err)})
 });
 
 
